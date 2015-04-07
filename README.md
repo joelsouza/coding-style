@@ -1,6 +1,6 @@
 # DZ Coding Style
 
-Este documento define a formatação e regras de escrita dos códigos **HTML, CSS** e **Javascript** na DZ. Tem como objetivo melhorar o trabalho colaborativo, a qualidade do código e servir como suporte para novos colaboradores.
+Este documento define a formatação e regras de escrita dos códigos **HTML, CSS** e **JavaScript** na DZ. Tem como objetivo melhorar o trabalho colaborativo, a qualidade do código e servir como suporte para novos colaboradores.
 
 - [Regras Gerais](#regras-gerais)
 	- [Indentação](#indentação)
@@ -31,7 +31,7 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Nomenclatura BEM (Bloco, Elemento, Modificador](#nomenclatura-bem-bloco-elemento-modificador)
 	- [Organização](#organização)
 	- [Comentários](#comentários-1)
-- [Javascript](#Javascript)
+- [JavaScript](#JavaScript)
 	- [Variáveis](#variáveis)
 	- [Comentários](#comentários-2)
 	- [Use Espaços em Branco](#use-espaços-em-branco)
@@ -46,10 +46,10 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 Configure seu editor para utilizar **4 espaços** de indentação.
 
 ### Espaços em branco
-Remover espaços em branco em linhas sem código e ao final da linha (trailing whitespace).
+Usar espaços em branco para aumentar a legibilidade. Remover espaços em branco em linhas sem código e ao final da linha (trailing whitespace).
 
 ### Nomenclatura
-Nomes de variáveis, funções e outros devem ser sempre escritos em inglês (com exceção dos hash)
+Nomes de variáveis, funções e outros devem ser sempre escritos em inglês, com exceção de links e hashs.
 
 ### Comprimento da linha
 Manter média de 80 caracteres por linha ou menos.
@@ -80,7 +80,7 @@ Omitir o protocolo (tornar a URL relativa) previne problemas de compatibilidade 
 ```
 
 ### Capitalização
-Utilizar **sempre** texto em caixa baixa.
+Utilizar **sempre** tags em caixa baixa.
 
 ```html
 <!-- Not recommended -->
@@ -99,18 +99,18 @@ color: #e5e5e5;
 ```
 
 ### Validação de Código
-Utilizar validadores da W3C para identificar possíveis **erros comuns**.
+Validar o código não é *estritamente* obrigatório, contudo, pode-se utilizar validadores da W3C para identificar possíveis **erros comuns**.
 
-* [Validador html](http://validator.w3.org/)
-* [Validador css](http://jigsaw.w3.org/css-validator/)
+* [HTML Validator](http://validator.w3.org/)
+* [CSS Validator](http://jigsaw.w3.org/css-validator/)
 
 ### Use o melhor formato de imagem disponível para a tarefa
-A quantidade de cores, transparência, tamanho e animação influenciam na escolha correta entre **GIF, JPG** e **PNG**. Escolha corretamente para cada um dos casos:
+A quantidade de cores, transparência, tamanho e animação influenciam na escolha correta entre **GIF, JPG** e **PNG**. Escolha corretamente para cada um dos casos, ex:
 
-* Fotos e ilustrações com diversas cores: utilizar JPG (progressivo).
-* Imagens com fundo transparente: utilizar PNG-24.
-* Imagens com poucas cores (menos de 128): utilizar PNG-8.
-* Imagens animadas: utilizar GIF, ou PNG se houver suporte.
+* Fotos e ilustrações com diversas cores: JPG (progressivo).
+* Imagens com fundo transparente: PNG-24.
+* Imagens com poucas cores (menos de 128): PNG-8.
+* Imagens animadas: GIF, ou PNG se houver suporte.
 
 ### Nomes de arquivos
 * Usar apenas letras minúsculas alfabéticas, sem acentuação.
@@ -118,7 +118,7 @@ A quantidade de cores, transparência, tamanho e animação influenciam na escol
 * Dividir arquivos de imagem em pastas conforme a complexidade / escalabilidade do projeto.
 * Nomes descritivos. Ex.: `cachorro-sentado.jpg`, `titulo-home.jpg`, `banner-dia-dos-namorados.png`.
 
-### Testes cross-browser
+### Testes *cross-browser*
 Teste no maior número de navegadores e dispositivos possível. A linha de corte mínima é:
 
 * Última versão de navegadores desktop modernos: Safari, Chrome, Firefox, Opera;
@@ -129,7 +129,7 @@ Teste no maior número de navegadores e dispositivos possível. A linha de corte
 
 ## HTML
 ### Formatação
-* Utilizar uma nova linha para cada elemento de bloco, lista ou tabela e indentar todo elemento filho.
+* Utilizar uma nova linha para cada elemento de bloco, lista ou tabela e indentar os elementos filhos.
 * Atributos devem sempre ter valores entre aspas duplas.
 * Atributos booleanos não precisam de valores.
 * Elementos self-closing (`<br>`, `<input>`, `<img>`, etc) não precisam de `/` no final.
@@ -170,7 +170,7 @@ Teste no maior número de navegadores e dispositivos possível. A linha de corte
 ```
 
 ### Doctype
-Utilizar Doctype do **html 5**
+Utilizar Doctype do **HTML5**
 
 `<!doctype html>`
 
@@ -182,16 +182,16 @@ Usar **UTF-8 (no BOM)**
 ### Viewport
 Utilize a metatag viewport padrão a seguir. Caso seja necessário, pode-se utilizar o parâmetro opcional `user-scalable=no` para evitar que os usuários usem o *"pinch-n-zoom"*.
 
-Caso os valores padrão sejam alterados, lembre de alterá-los na regra `@viewport` no **CSS**.
+Caso os valores padrões sejam alterados, lembre de alterá-los na regra `@viewport` no **CSS**.
 `<meta name="viewport" content="width=device-width, initial-scale=1">`
 
 ### Previnir Modo de Compatibilidade do IE
-Algumas vezes o navegador **IE** pode entrar indesejavelmente em **Modo de Compatibilidade**. Para prevenir este comportamento, utilizar a meta tag:
+Algumas vezes o **Internet Explorer** pode entrar indesejavelmente em **Modo de Compatibilidade**. Para prevenir este comportamento, utilizar a meta tag:
 
 `<meta http-equiv="x-ua-compatible" content="ie=edge">`
 
 ### Atributos Type
-Omitir os atributos `type` para **CSS** e **Javascript**. Isto pode ser feito com segurança no **html 5** e não gera problemas em navegadores antigos.
+Omitir os atributos `type` para **CSS** e **JavaScript**. Isto pode ser feito com segurança no **HTML5** e não gera problemas em navegadores antigos.
 
 ```html
 <!-- Not recommended -->
@@ -266,7 +266,7 @@ Para grupos de campos múltipla escolha (radio buttons, checkbox), criar um elem
 ```
 
 ### Tabelas
-Nunca utilizar tabelas para layout da página (a não ser em newsletters e emails marketing). Tabelas são apropriadas para **dados tabulares**.
+Nunca utilizar tabelas para layout da página (a não ser em emails, por motivos de compabilidade entre os leitores). Tabelas são apropriadas para **dados tabulares**.
 
 Fazer uso das tags `thead`, `tfoot` e `tbody` e `th` (e atributo `scope`) quando apropriado.
 
@@ -450,7 +450,7 @@ Para fazer uma analogia:
 - `.person__head {}` é um componente parte do bloco `.person {}`.
 - Finalmente, `.person--tall {}` é um modificador, uma variante específica do bloco `.person {}`.
 
-No html, a estrutura destes elementos fica:
+No HTML, a estrutura destes elementos fica:
 
 ```html
 <div class="person person--tall">
@@ -462,7 +462,7 @@ No html, a estrutura destes elementos fica:
 
 ### Organização
 #### Estrutura **Top-down**
-Estruturar a ordenação de estilos no modelo **top-down**, ou seja, organizar o **css** de acordo com a ordem da estrutura do **html**.
+Estruturar a ordenação de estilos no modelo **top-down**, ou seja, organizar o **CSS** de acordo com a ordem da estrutura do **HTML**.
 
 1. Generic classes (`body`, `a`, `p`, `h1`, etc.)
 2. Components (`forms`, `colunas`, `grids`, etc)
@@ -483,7 +483,7 @@ Utilizar comentários para separar seções.
 /******************************************************************************/
 ```
 
-## JS
+## JavaScript
 ### Variáveis
 * Utilize a notação **CamelCase** iniciando por minúscula para nomes de variável. Ex.: `nomeDaVariavel`
 * Prefira `'`(aspas simples) a `"`(aspas duplas) na declaração de **strings**. Dessa maneira é mais simples manter strings com **html**:
@@ -533,7 +533,7 @@ function outer(c, d) {
 ```
 
 ### preventDefault
-O comportamento padrão de um link, por exemplo, é direcionar o usuário ao recurso especificado no parâmetro `href`. Muitas vezes, no entanto, utilizamos **js** para modificar esse comportamento, abrindo um modal, expandindo uma seção etc. Para que a ação-padrão do evento não seja disparada, ou seja, para que o link apenas abra o modal e não direcione o usuário a outro recurso, é necessário chamar o método `preventDefault`, tanto em **JavaScript nativo** quanto no framework **jQuery**.
+O comportamento padrão de um link, por exemplo, é direcionar o usuário ao recurso especificado no parâmetro `href`. Muitas vezes, no entanto, utilizamos **JavaScript** para modificar esse comportamento, abrindo um modal, expandindo uma seção etc. Para que a ação-padrão do evento não seja disparada, ou seja, para que o link apenas abra o modal e não direcione o usuário a outro recurso, é necessário chamar o método `preventDefault`, tanto em **JavaScript nativo** quanto no framework **jQuery**.
 
 É importante que essa seja a **primeira instrução**, pois do contrário, será impossível visualizar quaisquer erros que ocorram, já que o usuário será direcionado a outro recurso. Ao invés de:
 
@@ -556,7 +556,7 @@ $('.selector').click(function (e) {
 ```
 
 ### Outras recomendações
-* Código **javascript** não deve ser escrito diretamente no **html** exceto quando for um pequeno trecho de código válido apenas em uma sessão do projeto.
+* Código **JavaScript** não deve ser escrito diretamente no **HTML** exceto quando for um pequeno trecho de código válido apenas em uma sessão do projeto.
 * Tags devem ser inseridas **antes** do fechamento da tag `body`. Isso reduz o efeito de atraso no carregamento de outros recursos da página devido ao carregamento de `scripts`.
 * Comparações apenas com `===` e `!==`.
 Utilize `;` (ponto-e-vírgula) no final de toda declaração simples.
