@@ -46,10 +46,10 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 Configure seu editor para utilizar **4 espaços** de indentação.
 
 ### Espaços em branco
-Remover espaços em branco em linhas sem código e ao final da linha (trailing whitespace).
+Usar espaços em branco para aumentar a legibilidade. Remover espaços em branco em linhas sem código e ao final da linha (trailing whitespace).
 
 ### Nomenclatura
-Nomes de variáveis, funções e outros devem ser sempre escritos em inglês (com exceção dos hash)
+Nomes de variáveis, funções e outros devem ser sempre escritos em inglês, com exceção de links e hashs.
 
 ### Comprimento da linha
 Manter média de 80 caracteres por linha ou menos.
@@ -80,7 +80,7 @@ Omitir o protocolo (tornar a URL relativa) previne problemas de compatibilidade 
 ```
 
 ### Capitalização
-Utilizar **sempre** texto em caixa baixa.
+Utilizar **sempre** tags em caixa baixa.
 
 ```html
 <!-- Not recommended -->
@@ -99,18 +99,18 @@ color: #e5e5e5;
 ```
 
 ### Validação de Código
-Utilizar validadores da W3C para identificar possíveis **erros comuns**.
+Validar o código não é *estritamente* obrigatório, contudo, pode-se utilizar validadores da W3C para identificar possíveis **erros comuns**.
 
-* [Validador html](http://validator.w3.org/)
-* [Validador css](http://jigsaw.w3.org/css-validator/)
+* [HTML Validator](http://validator.w3.org/)
+* [CSS Validator](http://jigsaw.w3.org/css-validator/)
 
 ### Use o melhor formato de imagem disponível para a tarefa
-A quantidade de cores, transparência, tamanho e animação influenciam na escolha correta entre **GIF, JPG** e **PNG**. Escolha corretamente para cada um dos casos:
+A quantidade de cores, transparência, tamanho e animação influenciam na escolha correta entre **GIF, JPG** e **PNG**. Escolha corretamente para cada um dos casos, ex:
 
-* Fotos e ilustrações com diversas cores: utilizar JPG (progressivo).
-* Imagens com fundo transparente: utilizar PNG-24.
-* Imagens com poucas cores (menos de 128): utilizar PNG-8.
-* Imagens animadas: utilizar GIF, ou PNG se houver suporte.
+* Fotos e ilustrações com diversas cores: JPG (progressivo).
+* Imagens com fundo transparente: PNG-24.
+* Imagens com poucas cores (menos de 128): PNG-8.
+* Imagens animadas: GIF, ou PNG se houver suporte.
 
 ### Nomes de arquivos
 * Usar apenas letras minúsculas alfabéticas, sem acentuação.
@@ -118,7 +118,7 @@ A quantidade de cores, transparência, tamanho e animação influenciam na escol
 * Dividir arquivos de imagem em pastas conforme a complexidade / escalabilidade do projeto.
 * Nomes descritivos. Ex.: `cachorro-sentado.jpg`, `titulo-home.jpg`, `banner-dia-dos-namorados.png`.
 
-### Testes cross-browser
+### Testes *cross-browser*
 Teste no maior número de navegadores e dispositivos possível. A linha de corte mínima é:
 
 * Última versão de navegadores desktop modernos: Safari, Chrome, Firefox, Opera;
@@ -129,7 +129,7 @@ Teste no maior número de navegadores e dispositivos possível. A linha de corte
 
 ## HTML
 ### Formatação
-* Utilizar uma nova linha para cada elemento de bloco, lista ou tabela e indentar todo elemento filho.
+* Utilizar uma nova linha para cada elemento de bloco, lista ou tabela e indentar os elementos filhos.
 * Atributos devem sempre ter valores entre aspas duplas.
 * Atributos booleanos não precisam de valores.
 * Elementos self-closing (`<br>`, `<input>`, `<img>`, etc) não precisam de `/` no final.
@@ -170,7 +170,7 @@ Teste no maior número de navegadores e dispositivos possível. A linha de corte
 ```
 
 ### Doctype
-Utilizar Doctype do **html 5**
+Utilizar Doctype do **HTML5**
 
 `<!doctype html>`
 
@@ -182,16 +182,16 @@ Usar **UTF-8 (no BOM)**
 ### Viewport
 Utilize a metatag viewport padrão a seguir. Caso seja necessário, pode-se utilizar o parâmetro opcional `user-scalable=no` para evitar que os usuários usem o *"pinch-n-zoom"*.
 
-Caso os valores padrão sejam alterados, lembre de alterá-los na regra `@viewport` no **CSS**.
+Caso os valores padrões sejam alterados, lembre de alterá-los na regra `@viewport` no **CSS**.
 `<meta name="viewport" content="width=device-width, initial-scale=1">`
 
 ### Previnir Modo de Compatibilidade do IE
-Algumas vezes o navegador **IE** pode entrar indesejavelmente em **Modo de Compatibilidade**. Para prevenir este comportamento, utilizar a meta tag:
+Algumas vezes o **Internet Explorer** pode entrar indesejavelmente em **Modo de Compatibilidade**. Para prevenir este comportamento, utilizar a meta tag:
 
 `<meta http-equiv="x-ua-compatible" content="ie=edge">`
 
 ### Atributos Type
-Omitir os atributos `type` para **CSS** e **Javascript**. Isto pode ser feito com segurança no **html 5** e não gera problemas em navegadores antigos.
+Omitir os atributos `type` para **CSS** e **Javascript**. Isto pode ser feito com segurança no **HTML5** e não gera problemas em navegadores antigos.
 
 ```html
 <!-- Not recommended -->
