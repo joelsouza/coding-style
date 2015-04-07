@@ -1,5 +1,6 @@
-# coding-style
-Este documento define a formatação e regras de escrita dos códigos **HTML, CSS** e **JS** na DZ. Tem como objetivo melhorar o trabalho colaborativo, a qualidade do código e servir como suporte para novos colaboradores.
+# DZ Coding Style
+
+Este documento define a formatação e regras de escrita dos códigos **HTML, CSS** e **Javascript** na DZ. Tem como objetivo melhorar o trabalho colaborativo, a qualidade do código e servir como suporte para novos colaboradores.
 
 - [Regras Gerais](#regras-gerais)
 	- [Indentação](#indentação)
@@ -7,7 +8,7 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Nomenclatura](#nomenclatura)
 	- [Comprimento da Linha](#comprimento-da-linha)
 	- [Protocolos](#protocolos)
-- [html](#html)
+- [HTML](#HTML)
 	- [Formatação](#formatação)
 	- [Doctype](#doctype)
 	- [Codificação](#codificação)
@@ -20,7 +21,7 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Listas](#listas)
 	- [Formulários](#formulários)
 	- [Tabelas](#tabelas)
-- [css](#css)
+- [CSS](#CSS)
 	- [Regras Gerais](#regras-gerais)
 	- [Formatação](#formatação-1)
 	- [Ordenamento de Propriedades](#ordenamento-de-propriedades)
@@ -30,7 +31,7 @@ Este documento define a formatação e regras de escrita dos códigos **HTML, CS
 	- [Nomenclatura BEM (Bloco, Elemento, Modificador](#nomenclatura-bem-bloco-elemento-modificador)
 	- [Organização](#organização)
 	- [Comentários](#comentários-1)
-- [js](#js)
+- [Javascript](#Javascript)
 	- [Variáveis](#variáveis)
 	- [Comentários](#comentários-2)
 	- [Use Espaços em Branco](#use-espaços-em-branco)
@@ -131,7 +132,7 @@ Teste no maior número de navegadores e dispositivos possível. A linha de corte
 * Utilizar uma nova linha para cada elemento de bloco, lista ou tabela e indentar todo elemento filho.
 * Atributos devem sempre ter valores entre aspas duplas.
 * Atributos booleanos não precisam de valores.
-* Elementos self-closing (`<br>`, `<input>`, `<img>`, etc) não precisam de `/` no final. 
+* Elementos self-closing (`<br>`, `<input>`, `<img>`, etc) não precisam de `/` no final.
 
 ``` html
 <input type="checkbox" checked>
@@ -398,7 +399,7 @@ Procurar declarar as propriedades na seguinte ordem:
 Evitar regras de seletores universais
 
 ```css
-[hidden="true"] {…} /* A universal rule */  
+[hidden="true"] {…} /* A universal rule */
 * {…}		/* A universal rule */
 tree > [collapsed="true"] {…} /* A universal rule */
 ```
@@ -446,7 +447,7 @@ Para fazer uma analogia:
 ```
 
 - `.person {}` é o bloco, o componente raíz.
-- `.person__head {}` é um componente parte do bloco `.person {}`. 
+- `.person__head {}` é um componente parte do bloco `.person {}`.
 - Finalmente, `.person--tall {}` é um modificador, uma variante específica do bloco `.person {}`.
 
 No html, a estrutura destes elementos fica:
@@ -540,7 +541,7 @@ O comportamento padrão de um link, por exemplo, é direcionar o usuário ao rec
 $('.selector').click(function (e) {
     $('.foo').show();
     $('.bar').hidden();
-    
+
     e.preventDefault();
 });
 ```
